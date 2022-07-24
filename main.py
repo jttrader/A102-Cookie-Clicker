@@ -1,11 +1,11 @@
 import time
 from selenium import webdriver
-from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
 
 URL = "http://orteil.dashnet.org/experiments/cookie/"
 
 chrome_driver_path = r'F:\Python\Udemy\DevelopmentSelenium\chromedriver.exe'
-driver = webdriver.Chrome(executable_path=chrome_driver_path)
+driver = webdriver.Chrome(service=Service(chrome_driver_path))
 driver.get(URL)
 
 #Get cookie to click on.
